@@ -5,4 +5,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   // base: process.env.VITE_BASE_PATH || "/Trinity-Ai",
+  build: {
+    outDir: "build", // Change output from 'dist' to 'build'
+  },
 });
