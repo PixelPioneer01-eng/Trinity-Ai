@@ -1,0 +1,130 @@
+ 
+.form-container {
+  max-width: 1100px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 32px 40px;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(24, 144, 255, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ 
+.form-container h4 {
+  color: #1890ff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+}
+
+ 
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px 32px;
+}
+
+@media (max-width: 767px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 20px 0;
+  }
+}
+
+ 
+.form-grid label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #262626;
+}
+ 
+.form-grid input,
+.form-grid select {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 2px solid #d9d9d9;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+.form-grid input:focus,
+.form-grid select:focus {
+  border-color: #1890ff;
+  box-shadow: 0 0 8px #1890ff80;
+}
+ 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+ 
+.form-actions {
+  margin-top: 36px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+ 
+button {
+  background: linear-gradient(135deg, #1890ff 0%, #40a9ff 100%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 30px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(24, 144, 255, 0.3);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+button:hover,
+button:focus {
+  background: linear-gradient(135deg, #096dd9 0%, #1890ff 100%);
+  box-shadow: 0 8px 24px rgba(24, 144, 255, 0.5);
+  outline: none;
+}
+button:disabled {
+  cursor: not-allowed;
+  background: #a3c9ff;
+  box-shadow: none;
+}
+
+
+.form-grid input,
+.form-grid select {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 2px solid #d9d9d9;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+input[type="text"],
+input[type="number"],
+select {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: inherit;
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 2px solid #d9d9d9;
+  border-radius: 8px;
+}
+input, select {
+  min-width: 0;  
+  max-width: 100%;
+}

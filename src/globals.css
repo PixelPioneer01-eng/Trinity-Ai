@@ -1,0 +1,192 @@
+
+.ant-table-thead > tr > th {
+  background: linear-gradient(135deg, #1890ff, #40a9ff);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #096dd9;
+  padding: 12px 10px;
+  font-size: 14px;
+}
+ 
+.ant-table-tbody > tr:nth-child(odd) {
+  background-color: #f0f5ff;
+}
+.ant-table-tbody > tr:nth-child(even) {
+  background-color: #ffffff;
+}
+ 
+.ant-table-tbody > tr:hover > td {
+  background-color: #bae7ff !important;
+  transition: background-color 0.25s ease;
+}
+ 
+.ant-table-cell {
+  padding: 12px 10px;
+  font-size: 13.5px;
+  color: #262626;
+}
+ 
+.ant-table-cell-num,
+.ant-table-cell-numeric {
+  text-align: right;
+}
+ 
+.shadow-card {
+  box-shadow: 0 8px 24px rgb(24 144 255 / 0.15);
+  border-radius: 2px;
+  border: 0.1px ridge rgb(85, 83, 83);
+}
+ 
+.ant-pagination-item {
+  border-radius: 6px;
+  border: 1px solid #1890ff;
+  transition: all 0.3s ease;
+}
+
+.ant-pagination-item-active {
+  background-color: #1890ff;
+  border-color: #1890ff;
+  a {
+    color: white !important;
+  }
+}
+
+ 
+.ant-btn-primary {
+  background: linear-gradient(135deg, #1890ff, #40a9ff);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgb(24 144 255 / 0.3);
+  transition: all 0.3s ease;
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background: linear-gradient(135deg, #096dd9, #1890ff);
+  box-shadow: 0 6px 16px rgb(24 144 255 / 0.5);
+}
+
+ 
+.ant-table-cell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px;
+  cursor: default;
+}
+
+.ant-table-cell:hover {
+  white-space: normal;
+  background: #e6f7ff;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3);
+  color: #096dd9;
+}
+.ant-card-body {
+  padding: 0;
+  overflow: hidden;
+}
+
+.data-preview-container {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;  
+}
+.data-preview-container,
+.ant-table {
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+}
+ 
+.beautiful-form-container {
+  max-width: 480px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 32px 28px;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgb(24 144 255 / 0.15);
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+ 
+.beautiful-form-container h2 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #1890ff;
+  margin-bottom: 24px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+ 
+.beautiful-form-container label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #262626;
+}
+ 
+.beautiful-form-container input[type="text"],
+.beautiful-form-container input[type="email"],
+.beautiful-form-container input[type="password"],
+.beautiful-form-container select,
+.beautiful-form-container textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #d9d9d9;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #262626;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: inherit;
+  outline: none;
+  resize: vertical;
+  min-height: 38px;
+}
+
+ 
+.beautiful-form-container input[type="text"]:focus,
+.beautiful-form-container input[type="email"]:focus,
+.beautiful-form-container input[type="password"]:focus,
+.beautiful-form-container select:focus,
+.beautiful-form-container textarea:focus {
+  border-color: #1890ff;
+  box-shadow: 0 0 6px #1890ff99;
+}
+
+.beautiful-form-container textarea {
+  min-height: 80px;
+}
+
+.beautiful-form-container button[type="submit"] {
+  margin-top: 28px;
+  width: 100%;
+  background: linear-gradient(135deg, #1890ff 0%, #40a9ff 100%);
+  border: none;
+  border-radius: 10px;
+  padding: 14px 0;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgb(24 144 255 / 0.35);
+  transition: background 0.25s ease, box-shadow 0.3s ease;
+}
+
+.beautiful-form-container button[type="submit"]:hover,
+.beautiful-form-container button[type="submit"]:focus {
+  background: linear-gradient(135deg, #096dd9 0%, #1890ff 100%);
+  box-shadow: 0 6px 26px rgb(24 144 255 / 0.5);
+  outline: none;
+}
+
+@media (max-width: 520px) {
+  .beautiful-form-container {
+    padding: 28px 22px;
+  }
+}
+
