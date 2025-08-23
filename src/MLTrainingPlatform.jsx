@@ -444,7 +444,7 @@ const MLTrainingPlatform = () => {
     }
   };
   return (
-    <div className="min-h-screen bg-gradient-subtle p-6">
+    <div className="min-h-screen p-6 bg-gradient-to-tr from-emerald-400 via-cyan-400 to-blue-500">
       <div className="max-w-7xl mx-auto">
 
         <div className="text-center mb-8">
@@ -459,14 +459,32 @@ const MLTrainingPlatform = () => {
           </Text>
         </div>
 
-
-        <Card className="shadow-elegant border-0 bg-card/80 backdrop-blur-sm transition-all duration-300">
+        <Card
+          className="
+    border border-emerald-100 
+    bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 
+    rounded-xl 
+    shadow-sm 
+    hover:shadow-md 
+    transition-all duration-300
+  "
+        >
           <Tabs
             activeKey={activeTab}
             onChange={setActiveTab}
-            className="[&_.ant-tabs-tab]:font-semibold [&_.ant-tabs-tab-active]:text-ml-primary [&_.ant-tabs-ink-bar]:!bg-ml-primary"
+            className="
+    [&_.ant-tabs-tab]:font-medium 
+    [&_.ant-tabs-tab]:text-gray-600 
+    [&_.ant-tabs-tab-active]:!text-ml-primary
+    [&_.ant-tabs-ink-bar]:!h-1 
+    [&_.ant-tabs-ink-bar]:rounded-full 
+    [&_.ant-tabs-ink-bar]:!bg-gradient-to-r 
+    [&_.ant-tabs-ink-bar]:from-emerald-400 
+    [&_.ant-tabs-ink-bar]:to-blue-500
+  "
             size="large"
           >
+
 
             <TabPane
               tab={
@@ -481,7 +499,17 @@ const MLTrainingPlatform = () => {
                 <div className="text-center py-8">
                   <Upload.Dragger
                     {...props}
-                    className="!border-2 !border-dashed !border-ml-primary/30 !bg-ml-secondary/10 hover:!border-ml-primary transition-colors duration-200"
+                    className="
+    !border-2 !border-dashed 
+    !border-emerald-400/40 
+    !bg-white/10 
+    backdrop-blur-md 
+    rounded-xl 
+    transition-all duration-300 
+    hover:!border-emerald-400 
+    hover:shadow-lg 
+    hover:bg-emerald-400/10
+  "
                   >
                     <p className="ant-upload-drag-icon">
                       <UploadOutlined className="text-4xl text-ml-primary" />
@@ -500,15 +528,17 @@ const MLTrainingPlatform = () => {
                     onClick={handleUpload}
                     loading={uploading}
                     disabled={!file}
-                    style={{ marginTop: 16 }}
+                    className="mt-4 bg-gradient-to-r from-emerald-400 via-cyan-500 to-blue-600 border-0 px-6 py-2 font-semibold text-white rounded-lg shadow-md hover:shadow-lg hover:opacity-90 transition-all duration-300"
                   >
                     Upload
                   </Button>
+
+
                 </div>
 
                 {uploadData?.top_10_records?.length > 0 && (
-                  <Card bordered={false} className="shadow-card" style={{ borderRadius: 20 }}>
-                    <Title level={4} className="!mb-4">
+                  <Card bordered={false} className="relative rounded-2xl p-[1px] overflow-hidden shadow-md">
+                    <Title level={4} className="!mb-4 text-gray-700">
                       Data Preview
                     </Title>
                     <Table
@@ -516,7 +546,7 @@ const MLTrainingPlatform = () => {
                       dataSource={uploadData?.top_10_records}
                       pagination={{ pageSize: 5 }}
                       loading={loading}
-                      className="shadow-card"
+                      className="shadow-none"
                       scroll={{ x: "max-content" }}
                     />
                   </Card>
@@ -528,7 +558,7 @@ const MLTrainingPlatform = () => {
                     size="large"
                     onClick={handleNextTab}
                     disabled={uploadData.length === 0}
-                    className="bg-gradient-primary border-0 shadow-elegant px-8"
+                    className="mt-4 bg-gradient-to-r from-emerald-400 via-cyan-500 to-blue-600 border-0 px-6 py-2 font-semibold text-white rounded-lg shadow-md hover:shadow-lg hover:opacity-90 transition-all duration-300"
                   >
                     Next: Fine Tune Parameters
                   </Button>
@@ -810,7 +840,7 @@ const MLTrainingPlatform = () => {
                     type="primary"
                     size="large"
                     onClick={handleNextTab}
-                    className="bg-gradient-primary border-0 shadow-elegant px-8"
+                    className="mt-4 bg-gradient-to-r from-emerald-400 via-cyan-500 to-blue-600 border-0 px-6 py-2 font-semibold text-white rounded-lg shadow-md hover:shadow-lg hover:opacity-90 transition-all duration-300"
                   >
                     Next: Upload Test Data
                   </Button>
@@ -851,14 +881,15 @@ const MLTrainingPlatform = () => {
                     loading={uploading}
                     disabled={!file1}
                     style={{ marginTop: 16 }}
+                    className="mt-4 bg-gradient-to-r from-emerald-400 via-cyan-500 to-blue-600 border-0 px-6 py-2 font-semibold text-white rounded-lg shadow-md hover:shadow-lg hover:opacity-90 transition-all duration-300"
                   >
                     Upload
                   </Button>
                 </div>
 
                 {testData?.top_10_with_predictions?.length > 0 && (
-                  <Card bordered={false} className="shadow-card" style={{ borderRadius: 20 }}>
-                    <Title level={4} className="!mb-4">
+                  <Card bordered={false} className="relative rounded-2xl p-[2px] overflow-hidden shadow-md">
+                    <Title level={4} className="!mb-4 text-gray-700">
                       Test Data Preview
                     </Title>
                     <Table
@@ -866,19 +897,17 @@ const MLTrainingPlatform = () => {
                       dataSource={testData?.top_10_with_predictions}
                       pagination={{ pageSize: 5 }}
                       loading={loading}
-                      className="shadow-card"
+                      className="shadow-none"
                       scroll={{ x: "max-content" }}
                     />
                     <Button
                       type="primary"
                       icon={<DownloadOutlined />}
                       onClick={handleDownload}
-                      style={{ marginTop: '16px' }}
+                      className="mt-4 bg-gradient-to-r from-emerald-400 via-cyan-500 to-blue-600 border-0 px-6 py-2 font-semibold text-white rounded-lg shadow-md hover:shadow-lg hover:opacity-90 transition-all duration-300"
                     >
                       Download Predictions
                     </Button>
-
-
                   </Card>
                 )}
 
@@ -888,7 +917,7 @@ const MLTrainingPlatform = () => {
                   size="large"
                   onClick={handleNextTab}
                   disabled={testData.length === 0}
-                  className=" flex justify-endbg-gradient-primary border-0 shadow-elegant px-8 "
+                  className="mt-4 bg-gradient-to-r from-emerald-400 via-cyan-500 to-blue-600 border-0 px-6 py-2 font-semibold text-white rounded-lg shadow-md hover:shadow-lg hover:opacity-90 transition-all duration-300"
                   style={{ marginLeft: "65em", }}
                 >
                   Next: Explain Model
@@ -932,7 +961,7 @@ const MLTrainingPlatform = () => {
                           size="large"
                           loading={loading}
                           onClick={() => handleExplainShap()}
-                          className="bg-ml-accent border-0 w-full"
+                          className="mt-4 bg-gradient-to-r from-emerald-400 via-cyan-500 to-blue-600 border-0 px-6 py-2 font-semibold text-white rounded-lg shadow-md hover:shadow-lg hover:opacity-90 transition-all duration-300"
                         >
                           {loading ? "Generating SHAP..." : "Explain SHAP"}
                         </Button>
@@ -955,7 +984,7 @@ const MLTrainingPlatform = () => {
                         size="large"
                         loading={loading}
                         onClick={() => handleExplainLime()}
-                        className="bg-ml-accent border-0 w-full"
+                        className="mt-4 bg-gradient-to-r from-emerald-400 via-cyan-500 to-blue-600 border-0 px-6 py-2 font-semibold text-white rounded-lg shadow-md hover:shadow-lg hover:opacity-90 transition-all duration-300"
                       >
                         Run LIME
                       </Button>
@@ -976,6 +1005,7 @@ const MLTrainingPlatform = () => {
                             }}
                           />
                           <Button
+                            className="mt-4 bg-gradient-to-r from-emerald-400 via-cyan-500 to-blue-600 border-0 px-6 py-2 font-semibold text-white rounded-lg shadow-md hover:shadow-lg hover:opacity-90 transition-all duration-300"
                             type="primary"
                             size="large"
                             style={{ marginTop: 10 }}
@@ -1006,6 +1036,7 @@ const MLTrainingPlatform = () => {
                             }}
                           />
                           <Button
+                            className="mt-4 bg-gradient-to-r from-emerald-400 via-cyan-500 to-blue-600 border-0 px-6 py-2 font-semibold text-white rounded-lg shadow-md hover:shadow-lg hover:opacity-90 transition-all duration-300"
                             type="primary"
                             size="large"
                             style={{ marginTop: 24 }}
